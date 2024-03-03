@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 3000px;
+} 
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  /* position: absolute; */
+  /* top: -100px; */
+  transform: translateY(-200px);
+  transition: 0.5s;
+  margin-left: -45px;
+}
+ul li:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+ul li {
+  padding: 15px;
+  background-color: #eee;
+  transition: 0.3s;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  width: 309px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  background-color: #74f5e6;
+}
+.container:hover .links ul {
+  transform: translateY(0);
+}
+li:hover {
+  font-size: 18px;
+}
+@media (max-width: 400px) {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  ul li:not(:last-child) {
+    border-bottom: 1px solid black;
+  }
+}
+::-webkit-scrollbar-track
